@@ -42,7 +42,7 @@ const styles = StyleSheet.create(
 class Scrolly extends React.Component{	
 	render(){
 		return(
-       		<ScrollView horizontal = {true} style = {{width: Dimensions.get('window').width}}>
+       		<ScrollView horizontal = {true} style = {{width: Dimensions.get('window').width }}>
        			<View style = {styles.SmallImageView1}>
         <Container>
         <Content>
@@ -51,7 +51,7 @@ class Scrolly extends React.Component{
           <Card style={styles.CardStyle}>
             <CardItem  cardBody>
               <Body>
-                <Image source={{uri: 'https://sommersholistichealth.com/wp-content/uploads/2018/12/acupuncture.jpg'}} style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
+                <Image source= {require('../HomeImages/ContentScroll/blog.jpg')} style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
                 <Text style = {styles.CardText}>
                       Health Blog
                 </Text>
@@ -65,12 +65,12 @@ class Scrolly extends React.Component{
       </Container>
       <Container>
         <Content>
-       <TouchableOpacity onPress={() =>  this.props.navigation.navigate('HealthBlog')}> 
+       <TouchableOpacity onPress={() =>  this.props.navigation.navigate('WorkShops')}> 
 
           <Card style={styles.CardStyle}>
             <CardItem  cardBody>
               <Body>
-                <Image source={{uri: 'https://sommersholistichealth.com/wp-content/uploads/2019/02/home-page-slider_scott1_resized.jpg'}} style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
+                <Image source={require('../HomeImages/ContentScroll/workshop.jpg')}style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
                 <Text style = {styles.CardText}>
                       WorkShops
                 </Text>
@@ -82,14 +82,14 @@ class Scrolly extends React.Component{
       </Container>
       <Container>
         <Content>
-          <TouchableOpacity onPress={() =>  this.props.navigation.navigate('HealthBlog')}> 
+          <TouchableOpacity onPress={() =>  this.props.navigation.navigate('Youtube')}> 
 
           <Card style={styles.CardStyle}>
-            <CardItem  cardBody>
-              <Body>
-                <Image source={{uri: 'https://blog.algolia.com/wp-content/uploads/2016/04/podcast.png'}} style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
+            <CardItem  cardBody style  = {{marginRight:15}}>
+              <Body >
+                <Image source={require('../HomeImages/ContentScroll/youtube.png')} style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
                 <Text style = {styles.CardText}>
-                      PodCasts
+                     Youtube
                 </Text>
               </Body>
             </CardItem>

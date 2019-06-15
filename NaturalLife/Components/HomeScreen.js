@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
 
   ViewBorder: 
   {
+   marginTop:2,
     flex:1,
 
     borderWidth: 25, 
@@ -113,6 +114,7 @@ export default class HomeScreen extends React.Component {
 
         <Content>
          <HeaderTitle/> 
+
       
       <Container style = {styles.ViewBorder}>
       

@@ -9,15 +9,20 @@
   "dependencies": {
     "native-base": "^2.12.1",
     "react": "16.8.3",
-    "react-native": "0.59.4",
+    "react-native": "0.59.9",
     "react-native-banner-carousel": "^1.0.3",
     "react-native-color-matrix-image-filters": "^5.1.4",
-    "react-native-gesture-handler": "^1.1.0",
+    "react-native-gesture-handler": "^1.3.0",
     "react-native-screen": "^0.0.1",
+    "react-native-splash-screen": "3.0.6",
+    "react-native-thumbnail-video": "^0.1.2",
+    "react-native-video": "^4.4.1",
+    "react-native-vimeo": "^0.3.0",
     "react-native-webview": "^5.6.2",
     "react-navigation": "^3.8.1",
     "react-navigation-drawer": "^1.2.1",
-    "react-navigation-tabs": "^2.1.1"
+    "react-navigation-tabs": "^2.1.1",
+    "react-player": "^1.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

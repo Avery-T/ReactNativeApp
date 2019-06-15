@@ -3,9 +3,11 @@ package com.naturallife;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import iyegoroff.RNColorMatrixImageFilters.ColorMatrixImageFiltersPackage;
-import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
+import com.brentvatne.react.ReactVideoPackage;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import iyegoroff.RNColorMatrixImageFilters.ColorMatrixImageFiltersPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -26,9 +28,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new ColorMatrixImageFiltersPackage(),
+            new RNCWebViewPackage(),
+            new ReactVideoPackage(),
+            new SplashScreenReactPackage(),
             new RNGestureHandlerPackage(),
-            new RNCWebViewPackage()
+            new ColorMatrixImageFiltersPackage()
       );
     }
 

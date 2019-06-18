@@ -7,7 +7,7 @@ import { Container, Header, Left, Body, Right, Title, Content, Footer, FooterTab
 
 import ContentScroll from './ContentScroll.js';
 import HeaderTitle from './NaturalHeader.js';
-
+import SplashScreen from 'react-native-splash-screen';
 
 const styles = StyleSheet.create({
    ImageText: 
@@ -105,6 +105,13 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = {
       header: <HeaderTitle/>,
       };
+  componentDidMount(){
+
+    setTimeout(() => {
+      SplashScreen.hide();},50);
+
+
+  }
  
   render() {
     return (

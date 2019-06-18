@@ -136,7 +136,7 @@ class DrawerWow extends React.Component {
       
       </TouchableOpacity>
 
-       <TouchableOpacity>
+       <TouchableOpacity onPress={() =>  this.props.navigation.navigate('Youtube')}>
       <View style={styless.drawerView}>
       <View style = {styless.viewIcon}>
       <Icon name="logo-youtube" style = {styless.iconSize}/>

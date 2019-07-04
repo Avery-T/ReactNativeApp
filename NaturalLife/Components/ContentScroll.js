@@ -1,31 +1,35 @@
 import React from 'react'
 import { createStackNavigator, createAppContainer,withNavigation } from "react-navigation";
 
-import  { TouchableOpacity}  from 'react-native'
+import  { TouchableOpacity, Text }  from 'react-native'
 import { StyleSheet, Image, View, Dimensions,ImageBackground, ScrollView } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body } from 'native-base';
 const styles = StyleSheet.create(
 {
 
-  SmallImages:
+  images:
   {
-    height: 125,
-    width: 158,
-    marginTop: 25, 
-    marginRight:10,
+    height: Dimensions.get('window').height/5.5, 
+    width: Dimensions.get('window').width/2.5,
+    flex: 1, 
+  
+    
+    borderColor:'white',
+   
   },
 
   SmallImageView1:
   {
-    flex: 1, 
+    flex: 2, 
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   CardStyle:
   {
   	flex: 0, 
-  	marginTop:25, 
+  	marginTop:Dimensions.get('window').height/35,
   	marginRight:10,
+    
 
   },
   CardText:
@@ -34,16 +38,26 @@ const styles = StyleSheet.create(
  	marginBottom:10, 
  	padding: 10,
  	fontWeight: 'bold',
+  color:'black',
 
  },
 
+
 });
 
+
 class Scrolly extends React.Component{	
+
 	render(){
+
 		return(
-       		<ScrollView horizontal = {true} style = {{width: Dimensions.get('window').width }}>
+        
+       		
+          <ScrollView horizontal = {true} style = {{width: Dimensions.get('window').width, height: '100%'}}   >
+         
        			<View style = {styles.SmallImageView1}>
+        
+        
         <Container>
         <Content>
         <TouchableOpacity onPress={() =>  this.props.navigation.navigate('HealthBlog')}> 
@@ -51,8 +65,8 @@ class Scrolly extends React.Component{
           <Card style={styles.CardStyle}>
             <CardItem  cardBody>
               <Body>
-                <Image source= {require('../HomeImages/ContentScroll/blog.jpg')} style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
-                <Text style = {styles.CardText}>
+                <Image source= {require('../HomeImages/ContentScroll/blog.jpg')} style ={styles.images}/>
+                <Text style = {styles.CardText} allowFontScaling={false}>
                       Health Blog
                 </Text>
               </Body>
@@ -70,8 +84,8 @@ class Scrolly extends React.Component{
           <Card style={styles.CardStyle}>
             <CardItem  cardBody>
               <Body>
-                <Image source={require('../HomeImages/ContentScroll/workshop.jpg')}style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
-                <Text style = {styles.CardText}>
+                <Image source={require('../HomeImages/ContentScroll/workshop.jpg')}style ={styles.images}/>
+                <Text style = {styles.CardText} allowFontScaling={false} >
                       WorkShops
                 </Text>
               </Body>
@@ -87,8 +101,8 @@ class Scrolly extends React.Component{
           <Card style={styles.CardStyle}>
             <CardItem  cardBody style  = {{marginRight:15}}>
               <Body >
-                <Image source={require('../HomeImages/ContentScroll/youtube.png')} style={{height: 125, width: 158, flex: 1, borderWidth:3, borderColor:'white'}}/>
-                <Text style = {styles.CardText}>
+                <Image source={require('../HomeImages/ContentScroll/youtube.png')} style = {styles.images}/>
+                <Text style = {styles.CardText} allowFontScaling={false}>
                      Youtube
                 </Text>
               </Body>
@@ -97,13 +111,16 @@ class Scrolly extends React.Component{
           </TouchableOpacity>
         </Content>
       </Container>
+       
 
 
 
     
-       				
+
        			</View>
       		</ScrollView>
+        
+     
 		);
 	}
 }

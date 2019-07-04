@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
-import { StyleSheet, Image, View, Dimensions, Text,ImageBackground, ScrollView, TouchableOpacity, } from 'react-native';
+import { StyleSheet, Image, View, Dimensions, Text,ImageBackground, ScrollView, TouchableOpacity, SafeAreaView} from 'react-native';
 import { Container, Header, Left, Body, Right, Title, Content, Footer, FooterTab, Button, Icon,Card, CardItem, Thumbnail} from 'native-base';
 
 
@@ -12,7 +12,13 @@ import SplashScreen from 'react-native-splash-screen';
 const styles = StyleSheet.create({
    ImageText: 
    {
-    fontSize: 25,
+  
+    
+     
+
+    fontSize: 0.06* Dimensions.get('window').width, 
+
+
     //borderRadius: 3,  
     //borderWidth: 3, 
    // borderColor: 'white',
@@ -21,17 +27,22 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
    
     borderColor: 'white',
+
         
   },
 
+
   ViewBorder: 
   {
-   marginTop:2,
+    marginTop:2,
     flex:1,
 
     borderWidth: 25, 
+
     
     borderColor: 'white', 
+    height: Dimensions.get('window').height, 
+
   },
 
   FirstBorder:
@@ -45,11 +56,14 @@ const styles = StyleSheet.create({
   FirstImage:
   {
 
-  
-    height: 225,
+ 
+    height: Dimensions.get('window').height/3, 
+    flexDirection: 'row',
+    justifyContent: 'center',
+
 
     width: Dimensions.get('window').width -50, 
-    marginTop: 20, 
+    marginTop:Dimensions.get('window').height/35,
     //makes the boder work on all sides
     overflow: 'hidden',
     borderWidth: 1, 
@@ -87,11 +101,39 @@ const styles = StyleSheet.create({
 
  WebsiteBlockText:
  {
- 	fontSize: 30, 
- 	textAlign: "center", 
- 	textAlignVertical: "center",
- 	marginTop: 140,
+
+ 	fontSize: 0.07* Dimensions.get('window').width, 
+ 	
+ 	marginTop: Dimensions.get('window').height/5.5,
+  
  	fontFamily: "times",
+
+ },
+
+ screenAlign: 
+ {
+  flex:1,
+  height: Dimensions.get('window').height,
+ },
+
+
+ imageButton:
+ {  
+
+
+          height:Dimensions.get('window').height/17, 
+          width:Dimensions.get('window').width/2.75,
+          borderWidth: 1, 
+          borderRadius:4, 
+          borderColor: 'white', 
+          backgroundColor: 'white',
+          position:'absolute',
+          marginTop: Dimensions.get('window').height/5.5,
+  
+
+          
+         
+
 
  },
 
@@ -101,10 +143,26 @@ const styles = StyleSheet.create({
 
 
 
+
+
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
       header: <HeaderTitle/>,
       };
+    
+
+   heightt = () => {
+    if (Dimensions.get('window').height < 650)
+    {
+      return Dimensions.get('window').height +50;
+      
+    }
+    else
+    {
+      return Dimensions.get('window').height;
+    }
+   }
   componentDidMount(){
 
     setTimeout(() => {
@@ -112,25 +170,28 @@ export default class HomeScreen extends React.Component {
 
 
   }
+
  
   render() {
     return (
 
 
-        <Container>
+     
+       <ScrollView 
+       contentContainerStyle  = {{flexGrow:1, height:this.heightt()}}> 
 
-        <Content>
+ 
          <HeaderTitle/> 
+       
 
       
       <Container style = {styles.ViewBorder}>
       
-       <Text style = {styles.ImageText}>Welcome to the Natural Life Center </Text>
+       <Text style = {styles.ImageText} allowFontScaling={false}>Welcome to Sommer's Holistic Health </Text>
         <TouchableOpacity  onPress={() =>  this.props.navigation.navigate('Website')}> 
        <ImageBackground style = {styles.FirstImage} source={{uri: 'https://sommersholistichealth.com/wp-content/uploads/2019/02/scott-front-page-2-resized.png'}}>
-
-      	<View style = {{flex:1, height:40, width:150, borderWidth: 1, borderRadius:4, borderColor: 'white', backgroundColor: 'white',position:'absolute', marginTop: styles.FirstImage.height/2 - styles.FirstImage.marginTop+45, marginHorizontal: styles.FirstImage.width/2 - 75}}/>
-        <Text style = {styles.WebsiteBlockText}>
+        <View style = {styles.imageButton}/>
+        <Text style = {styles.WebsiteBlockText} allowFontScaling={false}>
         Website
          </Text>
        </ImageBackground>
@@ -139,17 +200,20 @@ export default class HomeScreen extends React.Component {
        
        <View style = {{marginTop:35}}> 
 
-       <Text style = {styles.ImageText}> Learn </Text>
-
+       <Text style = {styles.ImageText} allowFontScaling={false}> Learn </Text>
+            
        <ContentScroll/>
+      
 
       
        </View>
       
        </Container> 
        
-      </Content>
-      </Container>
+ 
+      </ScrollView>
+     
+   
        
 
 

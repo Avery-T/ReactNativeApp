@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Image, View, Dimensions,ImageBackground, ScrollView } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Container, Header,  Footer, FooterTab, Button, Icon, Text, Content } from 'native-base';
-import YouTube from 'react-native-youtube';
+
 import FooterNav from './Footery.js';
 import  { TouchableOpacity}  from 'react-native'
 import { Thumbnail } from 'react-native-thumbnail-video';
@@ -42,11 +42,7 @@ export default class you extends React.Component {
   <HeaderTitle/>
   
   <View>
-    	<YouTube
-    apiKey="AIzaSyA-HGlGteBfzaQlQowZDdGV2XlO1fk7Sxw"
-
-  playlistId="PLszTsaoIz1ri5vhCe1jf3blCUU9iTNBmk"    // The YouTube video ID
-  play={true}
+    
                // control playback of video with true/false
          // control whether the video should play in fullscreen or inline
             // control whether the video should loop when ended

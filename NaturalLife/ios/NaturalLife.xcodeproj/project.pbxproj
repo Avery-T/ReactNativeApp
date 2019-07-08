@@ -63,6 +63,8 @@
 		1E369C0EF3FB4476B075FEC7 /* libRNColorMatrixImageFilters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 103ABC678E3E4760A44FFF08 /* libRNColorMatrixImageFilters.a */; };
 		1D9C98A0A54D4230B857EE08 /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C60897075744E91B0E1ECA6 /* libRCTVideo.a */; };
 		6EA182B0305E40C2806C9857 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A038FD5BF224223961465A6 /* libSplashScreen.a */; };
+		2B764E24DCF64BDB94043B45 /* libReact-Native-Webview-Bridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56A6180FF25C47FBA58A943B /* libReact-Native-Webview-Bridge.a */; };
+		D4D16625495E4EBF81FE4D25 /* libRCTYouTube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF87127EED844E2194ED80B5 /* libRCTYouTube.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -399,6 +401,10 @@
 		9C60897075744E91B0E1ECA6 /* libRCTVideo.a */ = {isa = PBXFileReference; name = "libRCTVideo.a"; path = "libRCTVideo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		04283B0A42654FE9B11226DB /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "SplashScreen.xcodeproj"; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		4A038FD5BF224223961465A6 /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		63A84EA5456A4D658E3002FE /* React-Native-Webview-Bridge.xcodeproj */ = {isa = PBXFileReference; name = "React-Native-Webview-Bridge.xcodeproj"; path = "../node_modules/react-native-webview-bridge/ios/React-Native-Webview-Bridge.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		56A6180FF25C47FBA58A943B /* libReact-Native-Webview-Bridge.a */ = {isa = PBXFileReference; name = "libReact-Native-Webview-Bridge.a"; path = "libReact-Native-Webview-Bridge.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5A74E15465D54BD79C7E82B9 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; name = "RCTYouTube.xcodeproj"; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		FF87127EED844E2194ED80B5 /* libRCTYouTube.a */ = {isa = PBXFileReference; name = "libRCTYouTube.a"; path = "libRCTYouTube.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +438,8 @@
 				1E369C0EF3FB4476B075FEC7 /* libRNColorMatrixImageFilters.a in Frameworks */,
 				1D9C98A0A54D4230B857EE08 /* libRCTVideo.a in Frameworks */,
 				6EA182B0305E40C2806C9857 /* libSplashScreen.a in Frameworks */,
+				2B764E24DCF64BDB94043B45 /* libReact-Native-Webview-Bridge.a in Frameworks */,
+				D4D16625495E4EBF81FE4D25 /* libRCTYouTube.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +635,8 @@
 				EC560A50C70B4379B930D980 /* RNColorMatrixImageFilters.xcodeproj */,
 				60CE24E010454810B976247D /* RCTVideo.xcodeproj */,
 				04283B0A42654FE9B11226DB /* SplashScreen.xcodeproj */,
+				63A84EA5456A4D658E3002FE /* React-Native-Webview-Bridge.xcodeproj */,
+				5A74E15465D54BD79C7E82B9 /* RCTYouTube.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1300,6 +1310,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1308,6 +1320,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Debug;
@@ -1330,6 +1344,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1338,6 +1354,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Release;
@@ -1365,6 +1383,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Debug;
@@ -1391,6 +1411,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Release;
@@ -1421,6 +1443,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1429,6 +1453,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Debug;
@@ -1459,6 +1485,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1467,6 +1495,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Release;
@@ -1496,6 +1526,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1504,6 +1536,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Debug;
@@ -1533,6 +1567,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1541,6 +1577,8 @@
 					"$(SRCROOT)/../node_modules/react-native-color-matrix-image-filters/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-video/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
+					"$(SRCROOT)/../node_modules/react-native-webview-bridge/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
 			};
 			name = Release;

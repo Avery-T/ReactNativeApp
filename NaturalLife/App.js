@@ -2,12 +2,11 @@ import React from "react";
 import { View, Text,ScrollView,SafeAreaView,StyleSheet,Image,ImageBackground,TouchableOpacity, Platform,Dimensions} from "react-native";
 import { createStackNavigator, createAppContainer, createDrawerNavigator} from "react-navigation";
 import { Container, Header, Content, Footer, FooterTab, Button, Icon, Badge } from 'native-base';
-
+import {Youtube} from 'react-native-openanything';
 import HomeScreen from './Components/HomeScreen.js'; 
 import WebsiteComponent from './Components/NavigationComponents/WebsiteComponent.js';
 import NavBar from './NavBar.js'; 
 import footery from './Components/NavigationComponents/Footery.js'
-import YoutubeHomePage from './Components/NavigationComponents/YoutubePage.js'
 import HealthBlogComponent from './Components/NavigationComponents/HealthBlog.js'
 import FaceBook from './Components/NavigationComponents/FaceBook.js'
 import Insta from './Components/NavigationComponents/Instagram.js'
@@ -18,8 +17,9 @@ const styless = StyleSheet.create({
    {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    paddingTop: 20,
-    paddingLeft: 20,   
+    paddingTop:  0.05* Dimensions.get('window').width,   
+
+    paddingLeft: 0.05* Dimensions.get('window').width,   
    },
 
   drawerText:
@@ -31,7 +31,7 @@ const styless = StyleSheet.create({
 
     fontWeight: 'bold',
     paddingTop:4,
-    paddingLeft:15,
+    paddingLeft:0.075* Dimensions.get('window').width,
     justifyContent: 'flex-start'
 
 
@@ -50,7 +50,7 @@ const styless = StyleSheet.create({
   viewIcon:
   {
 
-    width: 30, 
+    width: 0.06* Dimensions.get('window').width, 
   },
   iconSize:
   { 
@@ -67,38 +67,49 @@ const styless = StyleSheet.create({
   },
   member:
   {
+    flex:1,
 
     backgroundColor: 'red',
     opacity: .55,
     position: 'absolute',
     bottom:0,
     right:0,
-    width: 205,
-    borderTopLeftRadius: 10,
-    borderBottomLeftRadius:10,
-    marginBottom: 12, 
+    ///so it gets the width of the app drawer
+    width:'72%',  
+    borderTopLeftRadius: Dimensions.get('window').width *.025,
 
-    height:40,
+    borderBottomLeftRadius:Dimensions.get('window').width *.025,
+    marginBottom: Dimensions.get('window').width *.03,
+
+    height:Dimensions.get('window').width *.1,
    
   
   
   },
   memberText:
   {
+
     color: 'white',
 
-    fontSize:20,
-
+    fontSize:0.046* Dimensions.get('window').width, 
     fontWeight: 'bold',
     position: 'absolute',
     bottom:0,
     right:0,
-    marginBottom:20,
-    marginRight:3,
+    marginBottom:Dimensions.get('window').width *.05,
+    marginRight:Dimensions.get('window').height *.0065,
     fontFamily: "times",
 
 
   }, 
+  image:
+  {
+      height: 0.23* Dimensions.get('window').height,
+      width:'100%', 
+      flex:1
+  }
+
+
 
 
   });
@@ -123,7 +134,7 @@ class DrawerWow extends React.Component {
       <TouchableOpacity onPress={() =>  this.props.navigation.navigate('BecomeMember')}>
 
         
-     <ImageBackground source= {require('./HomeImages/become.png')} style={{height: 150, width:'100%', flex:1}}>
+     <ImageBackground source= {require('./HomeImages/become.png')} style={styless.image}>
       <View style = {styless.member}>
      
 
@@ -183,7 +194,7 @@ class DrawerWow extends React.Component {
       
       </TouchableOpacity>
 
-       <TouchableOpacity onPress={() =>  this.props.navigation.navigate('Youtube')}>
+       <TouchableOpacity onPress={() => Youtube('d1DWOl1REwQ')}>
       <View style={styless.drawerView}>
       <View style = {styless.viewIcon}>
       <Icon name="logo-youtube" style = {styless.iconSize}/>
@@ -233,7 +244,6 @@ const AppNavigator = createDrawerNavigator(
    WorkShops: WorkShop,
    PodCasts:NavBar,
    Schedule: NavBar, 
-   Youtube: YoutubeHomePage,
    Facebook: FaceBook,
    Instagram: Insta,
    BecomeMember: BuyMember,  

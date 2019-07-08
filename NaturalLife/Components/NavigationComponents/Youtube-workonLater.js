@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Image, View, Dimensions,ImageBackground, ScrollView } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text } from 'native-base';
-import YouTube from 'react-native-youtube';
+
 import FooterNav from './Footery.js';
 import  { TouchableOpacity}  from 'react-native'
 import { Thumbnail } from 'react-native-thumbnail-video';
@@ -71,14 +71,7 @@ enderElement(){
    if(this.state.VideoLoad2 == true )
 
       return(
-  	  	<YouTube
-  videoId="Im69kzhpR3I"   
-  apiKey="AIzaSyA-HGlGteBfzaQlQowZDdGV2XlO1fk7Sxw"
-  play={true}            
   
-
-  style={styles.thumbNail}
-		/>
 
       )
    else

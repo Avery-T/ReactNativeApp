@@ -1755,7 +1755,7 @@ cosmiconfig@^5.0.5:
     js-yaml "^3.13.0"
     parse-json "^4.0.0"
 
-create-react-class@^15.6.3:
+create-react-class@^15.6.0, create-react-class@^15.6.3:
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
   integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
@@ -3622,7 +3622,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-keymirror@^0.1.1:
+keymirror@0.1.1, keymirror@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/keymirror/-/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
   integrity sha1-kYiJ6hP40KQufFVyUO7nE63JXDU=
@@ -3766,7 +3766,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@4.17.11, lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@4.17.11, lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -4982,7 +4982,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5142,6 +5142,14 @@ react-native-keyboard-aware-scroll-view@0.8.0:
     prop-types "^15.6.2"
     react-native-iphone-x-helper "^1.0.3"
 
+react-native-openanything@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-openanything/-/react-native-openanything-0.0.6.tgz#7b694a28ce6de0363d46474ab3c72f5c0d14e658"
+  integrity sha512-ZFTYFFPH5j0VNpZDxd7jlaFz8qz1NMgXaHPioynAErk3CWyj6y261H1R06+nyoq7i0tJFKJXhuQzUrNemwcelQ==
+  dependencies:
+    lodash "^4.17.4"
+    prop-types "^15.6.0"
+
 react-native-safe-area-view@^0.13.0:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.13.1.tgz#834bbb6d22f76a7ff07de56725ee5667ba1386b0"
@@ -5204,6 +5212,16 @@ react-native-vimeo@^0.3.0:
   resolved "https://registry.yarnpkg.com/react-native-vimeo/-/react-native-vimeo-0.3.0.tgz#b3f4b0ca40e9fa2073f25c6a31f853aad0fe06bf"
   integrity sha1-s/SwykDp+iBz8lxqMfhTqtD+Br8=
 
+react-native-webview-bridge@^0.40.1:
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/react-native-webview-bridge/-/react-native-webview-bridge-0.40.1.tgz#8a64a108c5687101e1da86e87fd707350a3f89fa"
+  integrity sha512-JJmgt3P64KXganhRWivvzITCN5VUC2HdIDZkASUtY8PfsgJP61SAykYnIliUYl1qNq0Pkda4c6Gf1qF8RgfvVg==
+  dependencies:
+    create-react-class "^15.6.0"
+    invariant "^2.2.2"
+    keymirror "0.1.1"
+    prop-types "^15.5.10"
+
 react-native-webview@^5.6.2:
   version "5.6.2"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-5.6.2.tgz#aa257f01d0038c514874d1c41d99528f83274d8c"
@@ -5211,6 +5229,13 @@ react-native-webview@^5.6.2:
   dependencies:
     escape-string-regexp "1.0.5"
     invariant "2.2.4"
+
+react-native-youtube@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-youtube/-/react-native-youtube-1.1.0.tgz#efa30c4f7385d1951af643188e30760efd6c0784"
+  integrity sha512-/+xy09Bq4rdoUyMsDAVtflOje6mh6MK8V8D4+qC0d8EM7mSyrdrmo9rtlfQwCsGtnb+Uak46ILevyJb0FTFeHg==
+  dependencies:
+    prop-types "^15.5.0"
 
 react-native@0.59.9:
   version "0.59.9"

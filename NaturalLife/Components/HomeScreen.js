@@ -9,6 +9,8 @@ import ContentScroll from './ContentScroll.js';
 import HeaderTitle from './NaturalHeader.js';
 import SplashScreen from 'react-native-splash-screen';
 
+const {Height}  = Dimensions.get('window').height;
+const {Width}  = Dimensions.get('window').height;
 const styles = StyleSheet.create({
    ImageText: 
    {
@@ -102,12 +104,10 @@ const styles = StyleSheet.create({
  WebsiteBlockText:
  {
 
- 	fontSize: 0.07* Dimensions.get('window').width, 
- 	
- 	marginTop: Dimensions.get('window').height/5.5,
-  
+ 	fontSize: 0.04* Dimensions.get('window').height, 
+  marginLeft: .0215* Dimensions.get('window').height,
  	fontFamily: "times",
-
+  
  },
 
  screenAlign: 
@@ -122,12 +122,12 @@ const styles = StyleSheet.create({
 
 
           height:Dimensions.get('window').height/17, 
-          width:Dimensions.get('window').width/2.75,
+          width:Dimensions.get('window').height/5,
           borderWidth: 1, 
           borderRadius:4, 
           borderColor: 'white', 
           backgroundColor: 'white',
-          position:'absolute',
+        
           marginTop: Dimensions.get('window').height/5.5,
   
 
@@ -190,10 +190,11 @@ export default class HomeScreen extends React.Component {
        <Text style = {styles.ImageText} allowFontScaling={false}>Welcome to Sommer's Holistic Health </Text>
         <TouchableOpacity  onPress={() =>  this.props.navigation.navigate('Website')}> 
        <ImageBackground style = {styles.FirstImage} source={{uri: 'https://sommersholistichealth.com/wp-content/uploads/2019/02/scott-front-page-2-resized.png'}}>
-        <View style = {styles.imageButton}/>
+        <View style = {styles.imageButton}>
         <Text style = {styles.WebsiteBlockText} allowFontScaling={false}>
         Website
          </Text>
+        </View>
        </ImageBackground>
 
        </TouchableOpacity>

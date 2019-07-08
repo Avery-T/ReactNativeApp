@@ -105,8 +105,8 @@ android {
         applicationId "com.naturallife"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "4.0"
     }
     splits {
         abi {
@@ -150,6 +150,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-youtube')
+    implementation project(':react-native-webview-bridge')
     implementation project(':react-native-webview')
     implementation project(':react-native-video')
     implementation project(':react-native-splash-screen')

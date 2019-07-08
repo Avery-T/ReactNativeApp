@@ -1,9 +1,10 @@
 import React from 'react'
 import { createStackNavigator, createAppContainer,withNavigation } from "react-navigation";
-
+import {Youtube} from 'react-native-openanything';
 import  { TouchableOpacity, Text }  from 'react-native'
 import { StyleSheet, Image, View, Dimensions,ImageBackground, ScrollView } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body } from 'native-base';
+
 const styles = StyleSheet.create(
 {
 
@@ -36,10 +37,12 @@ const styles = StyleSheet.create(
  {
  	marginTop:8, 
  	marginBottom:10, 
- 	padding: 10,
+ 	padding: 0.013*Dimensions.get('window').height,
+  fontSize: 0.035* Dimensions.get('window').width, 
+
+
  	fontWeight: 'bold',
   color:'black',
-
  },
 
 
@@ -96,7 +99,7 @@ class Scrolly extends React.Component{
       </Container>
       <Container>
         <Content>
-          <TouchableOpacity onPress={() =>  this.props.navigation.navigate('Youtube')}> 
+          <TouchableOpacity onPress={() => Youtube('d1DWOl1REwQ')}> 
 
           <Card style={styles.CardStyle}>
             <CardItem  cardBody style  = {{marginRight:15}}>
